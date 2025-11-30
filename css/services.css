@@ -1,0 +1,382 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- Leistungen als große Card / Slider ---------- */
+
+.services {
+  background: var(--color-bg-section, #faf5f7); /* grauer Body */
+  padding: clamp(60px, 8vw, 100px) clamp(16px, 6vw, 80px);
+}
+
+.services__background {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.services__inner {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header */
+
+.services__header {
+  max-width: 900px;
+  margin: 0 auto clamp(32px, 5vw, 40px);
+  text-align: left;
+}
+
+.services__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: var(--section-text-two, #555);
+  margin-bottom: 0.4rem;
+}
+
+.services__title {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 4vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.9rem 0;
+  color: #111;
+}
+
+.services__intro {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ---------- Card-Shell / Slider ---------- */
+
+.services__card-shell {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 3.5vw, 40px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: stretch;
+}
+
+/* Pfeile */
+
+.services__nav {
+  border: none;
+  background: transparent;
+  font-size: 2.4rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.services__nav:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.services__nav--prev {
+  margin-right: 0.5rem;
+}
+
+.services__nav--next {
+  margin-left: 0.5rem;
+}
+
+/* Track */
+
+.services__card-track {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  min-height: 540px;
+  max-height: 540px;
+  overflow-y: auto;
+}
+
+/* Cards */
+
+.service-card {
+  display: none;
+}
+
+.service-card.is-active {
+  display: block;
+}
+
+/* einfache Slide/Fade-Animation für die neue Card */
+
+.service-card--slide-in-left {
+  animation: serviceSlideInLeft 0.35s ease both;
+}
+
+.service-card--slide-in-right {
+  animation: serviceSlideInRight 0.35s ease both;
+}
+
+@keyframes serviceSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes serviceSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Header der Card */
+
+.service-card__header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: flex-end;
+  margin-bottom: 1.2rem;
+}
+
+.service-card__index {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(3rem, 4.3vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: rgba(139, 0, 53, 0.18); /* sehr helle Primary */
+}
+
+.service-card__title {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.3vw, 2rem);
+  margin: 0 0 0.4rem 0;
+  color: #111;
+}
+
+/* Meta-Chips */
+
+.service-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.service-card__chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.22rem 0.7rem;
+  font-size: 0.78rem;
+  background: rgba(0, 0, 0, 0.04);
+  color: #555;
+}
+
+/* Textkörper */
+
+.service-card__body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.service-card__body p {
+  margin: 0 0 0.65rem 0;
+}
+
+.service-card__body ul {
+  padding-left: 1.2rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.service-card__body li {
+  margin-bottom: 0.35rem;
+}
+
+/* Footer / Button */
+
+.service-card__footer {
+  margin-top: 1.2rem;
+}
+
+.service-card__btn {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.service-card__btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* ---------- Booking-Info ---------- */
+
+.services__booking-info {
+  max-width: 1100px;
+  margin: clamp(32px, 5vw, 44px) auto 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.services__booking-title {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0 0 0.7rem 0;
+  color: #111;
+}
+
+.services__booking-sub {
+  font-weight: 600;
+  margin-top: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .services {
+    padding-inline: 16px;
+  }
+
+  .services__card-shell {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .service-card__header {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .services__nav {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .services__card-shell {
+    flex-direction: column;
+  }
+
+  .services__nav {
+    align-self: center;
+    order: 1;
+  }
+
+  .services__nav--prev {
+    margin: 0.7rem 0 0.2rem;
+  }
+
+  .services__nav--next {
+    margin: 0.2rem 0 0;
+  }
+
+  .services__card-track {
+    order: 0;
+  }
+}

@@ -1,0 +1,353 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- Footer ---------- */
+
+/* optional, falls noch nicht vorhanden */
+:root {
+  --section-bg: #ffffff;
+  --color-primary: #8b0035;
+  --primary-color: var(--color-primary);
+  --color-accent: #ffeac1;
+  --section-text: #000000;
+  --section-text-two: #000000;
+  --color-white: #ffffff;
+}
+
+.site_footer {
+  margin-top: 0;
+  background: var(--primary-color); /* Hintergrund jetzt primary */
+  color: var(--color-white); /* Text weiß */
+  /* etwas weniger Abstand links/rechts als andere Sektionen */
+  padding: clamp(32px, 6vw, 56px) clamp(12px, 4vw, 56px) 20px;
+}
+
+.footer_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  align-items: flex-start;
+}
+
+.footer_col {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.92rem;
+}
+
+/* Überschriften & Texte */
+
+.footer_heading {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0 0 0.85rem 0;
+  letter-spacing: 0.02em;
+}
+
+.footer_name {
+  font-weight: 500;
+  margin: 0 0 0.1rem 0;
+}
+
+.footer_role {
+  margin: 0 0 0.75rem 0;
+  opacity: 0.9;
+}
+
+/* Kontaktliste */
+
+.footer_contact_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+}
+
+.footer_contact_list li {
+  margin-bottom: 0.6rem;
+  color: inherit; /* erbt weiß vom Footer */
+}
+
+.footer_contact_list a {
+  color: inherit; /* Links ebenfalls weiß */
+  text-decoration: none;
+}
+
+/* korrigierter Selektor */
+.footer_col.footer_col--contact {
+  color: inherit;
+}
+
+.footer_contact_list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Weiterführende Links */
+
+.footer_links_block {
+  margin-top: 0.4rem;
+}
+
+.footer_subheading {
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 0.35rem 0;
+  opacity: 0.9;
+}
+
+.footer_links_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_links_list li {
+  margin-bottom: 0.25rem;
+}
+
+.footer_links_list a {
+  color: var(--color-accent); /* Links in Akzentfarbe auf Primary-Background */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer_links_list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Formular */
+
+.footer_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer_form_row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.footer_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer_field label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.footer_field input,
+.footer_field textarea {
+  border-radius: 4px; /* eckig, nur leicht abgerundet */
+  border: 1px solid var(--primary-color); /* Rand in Primary */
+  background: var(--section-bg); /* heller Hintergrund (weiß) */
+  color: var(--section-text); /* Text schwarz */
+  padding: 0.6rem 0.75rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.footer_field input::placeholder,
+.footer_field textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* dunkler Placeholder */
+}
+
+.footer_field input:focus,
+.footer_field textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+  background: var(--section-bg);
+}
+
+.footer_field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Submit-Button im Footer */
+.footer_submit {
+  margin-top: 0.25rem;
+  border-color: var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+}
+
+.footer_submit:hover {
+  background-color: var(--color-white);
+  color: var(--primary-color);
+}
+
+/* Karte / Anfahrt */
+
+.footer_map_text {
+  margin: 0 0 0.7rem 0;
+  opacity: 0.9;
+}
+
+.footer_map_text--note {
+  font-size: 0.86rem;
+  opacity: 0.85;
+}
+
+.footer_map_wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000000;
+  min-height: 220px;
+  margin-top: 0.4rem;
+}
+
+.footer_map_frame {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border: 0;
+}
+
+/* Unterer Balken */
+
+.footer_bottom {
+  max-width: 1200px;
+  margin: clamp(18px, 3vw, 28px) auto 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* weiße Linie */
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.footer_form_error {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #ffdddd;
+}
+
+.footer_form_success {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #d2ffd2;
+}
+
+/* ---------- Responsive Footer ---------- */
+
+@media (max-width: 900px) {
+  .footer_inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer_col--map {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer_inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer_col--map {
+    grid-column: auto;
+  }
+
+  .footer_form_row {
+    grid-template-columns: 1fr;
+  }
+}

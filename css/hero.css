@@ -1,0 +1,261 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- Hero ---------- */
+
+:root {
+  --section-bg: #ffffff; /* <-- neu */
+  --color-primary: #8b0035;
+  --color-accent: #ffeac1;
+  --section-text: #000000;
+  --section-text-two: #000000;
+  /* ...restliche Farben... */
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  background-color: var(--section-bg); /* Basis rechts */
+}
+
+.hero__inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ---------- Banner Left / Right ---------- */
+
+.banner_left,
+.banner_right {
+  flex: 1;
+}
+
+/* Linker Banner mit Gradient */
+.banner_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+  background-color: var(--section-bg);
+}
+
+/* Rechter Banner: Bildcontainer */
+.banner_right {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- Links oben im Banner ---------- */
+
+.hero_links {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  align-self: flex-end;
+  text-align: right;
+}
+
+.hero_links a {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.hero_links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transition: width 0.2s ease-out;
+}
+
+.hero_links a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Headline + Subtext ---------- */
+
+.hero__heading {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 5.4vw, 4.8rem);
+  line-height: 1;
+  color: var(--section-text);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.hero__subtext {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-weight: 300;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 34rem;
+  color: var(--section-text-two);
+  margin-bottom: 2rem;
+}
+
+/* ---------- Name ganz unten ---------- */
+
+.hero_signature {
+  margin-top: auto; /* schiebt ihn ganz nach unten */
+  margin-bottom: 0.75rem; /* minimal Abstand zum unteren Rand */
+  align-self: center; /* horizontal mittig im banner_left */
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: var(--color-primary);
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Bild rechts: füllt Banner komplett ---------- */
+
+.banner_right__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Hero responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero__inner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner_left {
+    padding-right: 1.5rem;
+  }
+
+  .hero_links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .hero__heading {
+    font-size: clamp(2.5rem, 8vw, 3.6rem);
+  }
+
+  .banner_right {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner_left {
+    padding-right: 1rem;
+  }
+}

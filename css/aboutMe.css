@@ -1,0 +1,297 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- About Me Section ---------- */
+
+.aboutme {
+  padding: clamp(60px, 8vw, 100px) clamp(16px, 6vw, 80px);
+  background: var(--section-bg, #ffffff);
+  color: var(--section-text, #111111);
+}
+
+/* Intro-Row: Text + Portrait nebeneinander, wie bei .omega__inner */
+
+.aboutme__inner {
+  max-width: 1200px;
+  margin: 0 auto clamp(40px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.aboutme__content-col {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Kicker + Überschriften */
+
+.aboutme__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: var(--section-text-two, #444);
+  margin-bottom: 0.4rem;
+}
+
+.aboutme__heading {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem 0;
+  color: var(--color-primary);
+}
+
+.aboutme__subheading {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 1.2rem 0;
+  color: #111;
+}
+
+/* Fließtext */
+
+.aboutme__body p {
+  margin-bottom: 0.9rem;
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #444;
+}
+
+.aboutme__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Portrait ähnlich zur Omega-Section */
+
+.aboutme__image-col {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme__image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+  background: #f6f2ef;
+}
+
+.aboutme__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.aboutme__image-badge {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* ---------- Timeline / Ausbildungen ---------- */
+
+.aboutme__timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.aboutme__timeline-heading {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  margin: 0 0 1.6rem 0;
+  color: #111;
+}
+
+/* Liste der Blöcke untereinander */
+
+.aboutme__timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+/* EIN Block: immer links Jahr, rechts Text – kein Abwechseln */
+
+.aboutme__timeline-item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.3fr) minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+/* Jahr links, in großer Inter-Schrift */
+
+.aboutme__timeline-year {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+/* Block rechts */
+
+.aboutme__timeline-content {
+  background: #faf5f7;
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.aboutme__timeline-content h4 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.aboutme__timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--section-text);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1050px) {
+  .aboutme__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutme__image-col {
+    order: -1; /* Portrait oben, Text darunter */
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutme {
+    padding-inline: 16px;
+  }
+
+  .aboutme__inner {
+    margin-bottom: 40px;
+  }
+
+  .aboutme__timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutme__timeline-year {
+    margin-bottom: 0.1rem;
+  }
+
+  .aboutme__timeline-content {
+    border-left-width: 3px;
+  }
+}

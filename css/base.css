@@ -1,0 +1,126 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --section-bg: #ffffff;
+  --color-primary: #8b0035;
+  --primary-color: var(
+    --color-primary
+  ); /* Alias, den du überall verwenden kannst */
+  --color-accent: #ffeac1;
+  --section-text: #000000;
+  --section-text-two: #000000;
+  /* ...restliche Farben... */
+}
+
+/* Reset & Basics */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

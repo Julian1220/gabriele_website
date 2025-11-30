@@ -1,0 +1,169 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- Sticky Navbar unter dem Hero ---------- */
+
+:root {
+  --section-bg: #ffffff; /* <-- neu */
+  --color-primary: #8b0035;
+  --color-accent: #ffeac1;
+  --section-text: #000000;
+  --section-text-two: #000000;
+  /* ...restliche Farben... */
+}
+
+.main_nav {
+  width: 100%;
+  background-color: var(--section-bg);
+  padding-block: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main_nav_inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo links, Links rechts */
+  padding-inline: 1.5rem;
+}
+
+.main_nav_brand {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.main_nav_links {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.main_nav_links a {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.main_nav_links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transition: width 0.2s ease-out;
+}
+
+.main_nav_links a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Spezielles Verhalten der Navbar auf der Services-Seite ---------- */
+
+/* Body der Services-Seite hat die Klasse .services_body */
+.services_body .main_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Damit der Inhalt nicht unter die Navbar rutscht */
+.services_body .services_page {
+  padding-top: 5.5rem; /* ggf. an deine tatsächliche Nav-Höhe anpassen */
+}

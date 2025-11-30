@@ -1,0 +1,265 @@
+/* ============================
+   INSTRUMENT SERIF
+   ============================ */
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/instrument-serif/instrument-serif-v5-latin-italic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   EB GARAMOND
+   ============================ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-500.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/eb-garamond/eb-garamond-v32-latin-600.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* ============================
+   INTER
+   ============================ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/inter/inter-v20-latin-300.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/inter/inter-v20-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/inter/inter-v20-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/inter/inter-v20-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ---------- Terminseite / Appointment ---------- */
+
+.appointment_body {
+  background: #faf5f7; /* gleiche Stimmung wie Leistungen-Card-Bereich */
+}
+
+/* Hauptbereich */
+
+.appointment_main {
+  padding-top: 80px; /* Platz unter der Navbar */
+}
+
+/* Section */
+
+.appointment {
+  padding: clamp(56px, 8vw, 96px) clamp(16px, 6vw, 80px);
+}
+
+.appointment__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header */
+
+.appointment__header {
+  margin-bottom: clamp(24px, 4vw, 32px);
+}
+
+.appointment__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--section-text-two, #555);
+  margin-bottom: 0.4rem;
+}
+
+.appointment__title {
+  font-family: "Instrument Serif", "EB Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.1rem, 3.4vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.7rem 0;
+  color: #111111;
+}
+
+.appointment__intro {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #444444;
+  max-width: 40rem;
+}
+
+/* Card */
+
+.appointment__card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: clamp(24px, 3.5vw, 36px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+  margin-top: clamp(16px, 3vw, 24px);
+}
+
+/* Formular */
+
+.appointment__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Layout für zwei Spalten (Name) */
+
+.appointment__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Felder */
+
+.appointment__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.appointment__field label {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.appointment__field input,
+.appointment__field textarea {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0.7rem 0.8rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fafafa;
+  color: #111111;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.appointment__field input::placeholder,
+.appointment__field textarea::placeholder {
+  color: rgba(0, 0, 0, 0.42);
+}
+
+.appointment__field input:focus,
+.appointment__field textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(139, 0, 53, 0.18);
+  background-color: #ffffff;
+}
+
+.appointment__field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Hinweistext unter dem Formular */
+
+.appointment__hint {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-top: 0.3rem;
+  max-width: 36rem;
+}
+
+.appointment__hint a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.appointment__hint a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Button */
+
+.appointment__submit {
+  margin-top: 0.6rem;
+  align-self: flex-start;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.appointment__submit:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .appointment {
+    padding-inline: 16px;
+  }
+
+  .appointment__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment__card {
+    border-radius: 18px;
+  }
+}
