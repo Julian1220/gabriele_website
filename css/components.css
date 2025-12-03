@@ -101,9 +101,10 @@
 .btn-pill {
   padding: 0.85rem 2.6rem;
   border-radius: 999px;
-  border: 1.5px solid;
+  border: 1.5px solid var(--color-primary);
   background-color: transparent;
   color: var(--color-primary);
+
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   font-size: 0.9rem;
@@ -111,28 +112,13 @@
   letter-spacing: 0.12em;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.35s ease, color 0.35s ease,
-    border-color 0.35s ease;
+
+  transition: background-color 0.5s ease, color 0.4s ease,
+    border-color 0.5s ease;
 }
 
 .btn-pill:hover {
-  background-color: var(--color-primary); /* füllt sich mit Gold */
-  color: var(--section-bg); /* Schrift in Weinrot */
-}
-
-/* Button-Variante im Services-Detail */
-
-.btn-pill--service {
-  border-color: var(--section-bg);
-  background-color: var(--section-bg);
-  color: var(--cta-gold);
-  padding: 0.75rem 2.4rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-}
-
-.btn-pill--service:hover {
-  background-color: #a1003a;
-  border-color: #a1003a;
-  color: var(--cta-gold);
+  background-color: var(--color-primary);
+  color: var(--section-bg); /* wird weiß (#fff) */
+  border-color: var(--color-primary);
 }
