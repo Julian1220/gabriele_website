@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hebamme-cranio.at/sitemap.xml
